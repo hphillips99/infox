@@ -25,8 +25,10 @@ def check_input():
     if request.method == 'POST':
         print(request.json['text'])
         input = request.json['text']
+        input = input.replace('"','').replace("'","")
         response = requests.post(API_URL, headers=headers, json=input)
         output = response.json()
+        print(output)
         return (json.dumps(output[0]))
 if __name__ == '__main__':
    app.run(debug = True)

@@ -7,7 +7,7 @@ const Home = () => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          height: '40vh',
+          height: '90vh',
           color: 'white'
           }}
       >
@@ -32,7 +32,7 @@ class NameForm extends React.Component {
   handleSubmit(event) {
     console.log("text to summarize: " + this.state.value);
     event.preventDefault();
-    const r = fetch("https://127.0.0.1/model", {  
+    const r = fetch("/model", {  
       method: 'POST', 
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({'text': this.state.value})
@@ -53,7 +53,7 @@ class NameForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      /*<form onSubmit={this.handleSubmit}>
         <label>
           Submit article here:
           <p></p>
@@ -61,7 +61,17 @@ class NameForm extends React.Component {
         </label>
         <p></p>
         <input type="submit" value="Submit" />
-      </form>
+      </form>*/
+      
+      <form onSubmit={this.handleSubmit}>
+            <div className="form-inner">
+                <h2>Submit Article Here:</h2>
+                <div className="form-group">
+                    <textarea rows={10} cols={56} type="text" value={this.state.value} onChange={this.handleChange} />
+                </div>
+                <input type="submit" value="SUBMIT" />
+            </div>
+        </form>
     );
   }
 }

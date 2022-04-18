@@ -24,8 +24,9 @@ function SignIn() {
                 </div>
                 <div className="form-group">
                     <label htmlFor="password">Password:</label>
-                    <input type="password" name="password" od="password"/>
+                    <input type="password" name="password" id="password"/>
                 </div>
+                <input type="submit" value="LOGIN" />
             </div>
         </form>
     </div>

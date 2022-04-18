@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-/*
+
 input, button {
     appearance: none;
     background: none;
@@ -58,7 +58,7 @@ form .form-inner .form-group {
     margin-bottom: 15px;
 }
 
-.form-inner .form-group {
+.form-inner .form-group label {
     display: block;
     color: #54C6F2;
     font-size: 12px;
@@ -66,15 +66,15 @@ form .form-inner .form-group {
     transition: 0.4s;
 }
 
-.form-inner .form-group {
-    color: #057CA9;
+.form-inner .form-group:focus-within label{
+    color: #1F2427;
 }
 
-form .form-inner .form-group {
+form .form-inner .form-group input{
     display: block;
     width: 100%;
     padding: 10px 15px;
-    background-color: #1F2427;
+    background-color: #93c4d8;
     border-radius: 8px;
     transition: 0.4s;
 }
@@ -82,4 +82,20 @@ form .form-inner .form-group {
 form .form-inner .form-group input:focus {
     box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
 }
-*/
+
+form .form-inner input[type="submit"] {
+    display: inner-block;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background-image: linear-gradient(to right, #057CA9, #02ADEF, #54C6F2);
+    background-size: 200%;
+    background-position: 0%;
+    transition: 0.4s;
+    color: #FFF;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+form .form-inner input[type="submit"]:hover {
+    background-position: 100% 0%;
+}

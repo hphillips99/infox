@@ -1,4 +1,5 @@
 import React from 'react'
+import {SettingsPane, SettingsPage, SettingsContent, SettingsMenu} from 'react-settings-pane'
 
 const Settings = () => {
   return (
